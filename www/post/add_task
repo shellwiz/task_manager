@@ -1,0 +1,16 @@
+#!/bin/bash
+
+"$DIR_EXEC/escape_html.sh" | {
+    read owner
+    read head
+    read body
+
+    while read line ; do
+    	body="$body
+$line"
+    done
+
+    "$DIR_DATA"/model.sh insert "$owner" "$head" "$body"
+
+    [ $? -eq 0 ] || echo BAD
+}

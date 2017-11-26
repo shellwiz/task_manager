@@ -1,0 +1,39 @@
+
+.actions-bar {
+    /*height: 68px;*/
+    height: 60px;
+    border-bottom: 1px solid #d5dddf;
+    background: #aaa;
+    line-height: normal;
+}
+
+.listable{
+   margin-left:40px;
+   margin-right:40px;
+   background-color:#999; 
+}
+
+.row-form {
+  margin: 40px;
+  outline: thin solid;
+  height: 400px;
+}
+
+.point {
+  cursor: pointer;
+}
+
+textarea { 
+   resize:vertical;
+   height: 400px;
+   outline: none;
+}
+
+ul:not(.browser-default)>li {
+    display: block;
+    list-style-type: circle;
+    margin-top: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}

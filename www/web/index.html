@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+ INCLUDE_HTML stdhead
+ <body>
+  <div class="col-sm col-md-10 col-md-offset-1">
+   <header class="sticky row">
+    <a class=button onclick="showDescription('new')" style="margin-left: 4%;">CREATE</a>
+    <a class='button green' href="/view" style="margin-left: 76%;">view</a>
+   </header>
+   <div class="col-sm-12">
+    <div class="hidden" colspan="3" id="descrnew">
+     <div class="row">
+      <div class="col-sm-7">
+       Header:
+       <input id="taskHeadernew" value=''></input>
+      </div>
+      <!--div class="col-sm-1"></div-->
+      <div class="col-sm-4 col-md-offset-1">
+       Owner:
+       <input id="taskOwnernew" value=''></input> <br>
+      </div>
+      <textarea id="taskTextnew" style='height: 10rem;'></textarea>
+      <button onclick="addTask()">add</button><br><br>
+     </div>
+    </div>
+    <table>
+     <thead>
+     <tr>
+      <th>owner</th>
+      <th>header</th>
+      <th>date start</th>
+     </tr>
+     </thead>
+     <tbody id=listTask>
+     EXECUTE db_to_html.sh
+    </table>
+   </div>
+  </div>
+ </body>
+</html>

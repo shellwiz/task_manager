@@ -1,0 +1,7 @@
+#!/bin/bash
+
+read id
+
+"$DIR_DATA"/model.sh get_row "$id" | "$DIR_EXEC"/csv_to_arg.py "$BUILD_HTML" "$DIR_WEB"/row.html | sed -e 's/&/\\&/g' -e 's/\\\\&/\\\\\\\&/g' | bash 2> /dev/null
+
+[ $? -eq 0 ] && echo BAD

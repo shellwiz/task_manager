@@ -1,0 +1,17 @@
+#!/bin/bash
+
+"$DIR_EXEC/escape_html.sh" | {
+
+    read id
+    read head
+    read body
+
+    while read line ; do
+    	body="$body
+$line"
+    done
+
+    "$DIR_DATA"/model.sh update "$id" "$head" "$body"
+
+    [ $? -eq 0 ] && echo OK || echo BAD
+}
