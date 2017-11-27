@@ -1,8 +1,8 @@
 # Task manager
 
-This a light web project for edit and save your task.
+This is a lightweight web project for editing and saving your tasks.
 
-# For install
+# Installation
 
 ## Docker (Easy way)
 
@@ -12,18 +12,18 @@ docker create -p 80:80 <yourname_image>
 docker start <yourname_image>
 ~~~
 
-## Install a local machine (Hard way)
+## Manually (Hard way)
 
-Must be install this component:
+Following components must be installed:
 
-* pandoc
-* apache2
-* sqlite3
-* bash
-* python3
+* `pandoc`
+* `apache2`
+* `sqlite3`
+* `bash`
+* `python3`
 
-In config apache write this:
- * replacing `<path_to_www_dir> ` to dir `www` (from project)
+Add this to apache config:
+ * replace `<path_to_www_dir>` with real path of `www` directory (from project)
 ~~~
 <Directory <path_to_www_dir>>
     Options Indexes FollowSymLinks
@@ -41,8 +41,8 @@ AddHandler cgi-script .cgi .pl .py .sh
 </Directory>
 ~~~
 
-This mods apache2 must be turn on:
+Also these apache2 mods must be turned on:
 
-* mod_cgid
-* mod_cgi
-* mod_alias
+* `mod_cgid`
+* `mod_cgi`
+* `mod_alias`
